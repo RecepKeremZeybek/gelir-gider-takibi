@@ -38,6 +38,38 @@
           Ekle
         </button>
       </form>
+
+      <form id="harcama-formu" class="row g-3 p-3 mt-4 border rounded-4 m-0">
+        <h4 class="text-center">Harcama Formu</h4>
+        <div class="col-6">
+          <label for="harcama-alani" class="form-label">Harcama Alanı</label>
+          <input
+            type="text"
+            class="form-control"
+            id="harcama-alani"
+            placeholder="Market, Manav, Fatura vb..."
+          />
+        </div>
+        <div class="col-6">
+          <label for="tarih" class="form-label">Tarih</label>
+          <input type="date" class="form-control" id="tarih" />
+        </div>
+        <div class="col-12">
+          <label for="harcanan-miktar" class="form-label"
+            >Harcanan Miktar</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            id="harcanan-miktar"
+            placeholder="1000 ₺"
+          />
+        </div>
+
+        <div class="col-12 text-center">
+          <button type="submit" class="btn btn-warning">Sign in</button>
+        </div>
+      </form>
     </main>
 
     <script src="app.js"></script>
