@@ -5,7 +5,7 @@ const ekleFormu = document.getElementById("ekle-formu");
 
 //? Sonuç tablosu
 
-const gelirinizTd = document.getElementById("geliriniz")
+const gelirinizTd = document.getElementById("geliriniz");
 
 //* variables
 let gelirler = "";
@@ -13,6 +13,10 @@ let gelirler = "";
 ekleFormu.addEventListener("submit", (e) => {
   e.preventDefault();
   gelirler = Number(gelirler) + Number(gelirInput.value);
+
+  //verilerin kaliciligini saglamak için verileri localstorageye attık
+
+  localStorage.setItem("gelirler", gelirler);
 
   ekleFormu.reset();
   //   console.log(gelirler);
@@ -23,6 +27,5 @@ ekleFormu.addEventListener("submit", (e) => {
 //* functions
 
 const hesaplaVeGuncelle = () => {
-
-gelirinizTd.innerText=gelirler
+  gelirinizTd.innerText = gelirler;
 };
