@@ -14,7 +14,7 @@ ekleFormu.addEventListener("submit", (e) => {
   e.preventDefault();
   gelirler = Number(gelirler) + Number(gelirInput.value);
 
-  //verilerin kaliciligini saglamak için verileri localstorageye attık
+  //*verilerin kaliciligini saglamak için verileri localstorageye attık
 
   localStorage.setItem("gelirler", gelirler);
 
@@ -23,6 +23,11 @@ ekleFormu.addEventListener("submit", (e) => {
 
   hesaplaVeGuncelle();
 });
+
+window.addEventListener("load",()=>{
+    gelirler=localStorage.getItem("gelirler")
+    // console.log(gelirler)
+})
 
 //* functions
 
