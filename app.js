@@ -25,7 +25,8 @@ ekleFormu.addEventListener("submit", (e) => {
 });
 
 window.addEventListener("load",()=>{
-    gelirler=localStorage.getItem("gelirler")
+    gelirler=Number(localStorage.getItem("gelirler"))
+    hesaplaVeGuncelle()
     // console.log(gelirler)
 })
 
